@@ -68,3 +68,78 @@ input:checked ~ .bayan-content {
 input:checked + .bayan-label {
     background: #586068;;
 }
+@media (hover: hover) {
+  .bayan-elem:hover .bayan-content {
+    max-height: 20em;
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    padding: 1em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  } 
+  .bayan-elem:hover input + .bayan-label:after {
+    transform: rotate(90deg);
+  }
+  .bayan-elem .bayan-label:hover {
+    background:#979ea5
+  }
+}
+
+@media (hover: none) {
+  h1{
+    text-align: center;
+  }
+  input {
+    opacity: 0;
+  }
+  .bayan-elem {
+    width: 50%;
+    color: white;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .bayan-elem .bayan-label {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background: #b2bbc3;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .bayan-elem .bayan-label::after {
+    content: "\276F";
+    width: 1em; 
+    height: 1em;
+    text-align: center;
+    transition: all .45s;
+  }
+  .bayan-elem .bayan-content {
+    max-height: 0;
+    padding: 0 1em;
+    color: #9aaaba;
+    background: white;
+    transition: all .75s;
+  }
+  .bayan-content{
+    cursor: pointer;
+  }
+  input:checked + .bayan-label:after {
+    transform: rotate(90deg);
+  }
+  input:checked ~ .bayan-content {
+    max-height: 20em;
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    padding: 1em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  input:checked + .bayan-label {
+      background: #586068;;
+  }
+}
