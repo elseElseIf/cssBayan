@@ -13,11 +13,14 @@ input {
 }
 .bayan-elem:hover .bayan-content {
   max-height: 20em;
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
   padding: 1em;
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
+} 
 .bayan-elem:hover input + .bayan-label:after {
   transform: rotate(90deg);
 }
@@ -54,8 +57,14 @@ input:checked + .bayan-label:after {
 }
 input:checked ~ .bayan-content {
   max-height: 20em;
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
   padding: 1em;
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+input:checked + .bayan-label {
+    background: #586068;;
 }
